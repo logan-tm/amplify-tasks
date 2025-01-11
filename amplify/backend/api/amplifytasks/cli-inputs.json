@@ -4,8 +4,10 @@
     "apiName": "amplifytasks",
     "serviceName": "AppSync",
     "defaultAuthType": {
-      "mode": "API_KEY",
-      "expirationTime": 7
-    }
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authamplifytasks6f2fe008"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": []
   }
 }

@@ -16,9 +16,12 @@ function App() {
   return (
     <div className="App">
       <Authenticator>
-        {({ signOut }) => (
+        {({ signOut, user }) => (
           <main>
             <header className="App-header">
+              <button onClick={() => console.log(user)}>
+                Show user in console
+              </button>
               {isLoading && <p>Loading...</p>}
               {!isLoading &&
                 todos.map((todo, idx) => (
@@ -27,7 +30,6 @@ function App() {
                     <p>{todo.name}</p>
                     <p>{todo.description || ""}</p>
                     <p>{todo.createdAt || ""}</p>
-                    <button onClick={() => {}}>Update</button>
                     <button onClick={() => deleteTodo(todo.id)}>Delete</button>
                   </div>
                 ))}
